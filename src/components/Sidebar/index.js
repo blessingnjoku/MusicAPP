@@ -8,7 +8,8 @@ import {AiOutlineClose,AiIcons}from 'react-icons/ai'
 const Wrapper = styled.div`
 
 
-/* position:relative; */
+position:fixed;
+top: 100px;
 .menu_icon {
   display:none;
   @media screen and (max-width:468px){
@@ -25,7 +26,7 @@ const Wrapper = styled.div`
 
 .container{
   height:100vh;
-  width: 70px;
+  width: 100px;
   background: #1D2123;
  text-align:center;
 padding-left:20px;
@@ -163,7 +164,8 @@ color: rgba(239, 238, 224, 0.25);
 `
 
 function SideBar() {
- 
+
+//  function to toggle the sidebar
   const [openNav, setOpenNav]= useState(false);
 
   const ShowMenu=()=>{ setOpenNav(!openNav)}
@@ -175,7 +177,7 @@ function SideBar() {
 
     <Wrapper >
 
-    <div className='menu_icon ' onClick={ShowMenu}>
+    <div className='menu_icon' onClick={ShowMenu}>
       <MenuIcon/>
 
     </div>

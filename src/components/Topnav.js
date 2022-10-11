@@ -5,6 +5,10 @@ import Icons, { Logo, MenuIcon, Serachicon } from '../assets/Icons'
 import SideBar from './Sidebar'
 
 const Box = styled.div`
+position:fixed;
+top: 0;
+z-index: 1000;
+
 
 padding: 25px 10px 0 10px;
 @media screen and (max-width:468px){
@@ -89,13 +93,10 @@ outline:none;
     }
     
   }
-
   
 }
 
 }
-
-
 
 `
 
@@ -114,8 +115,6 @@ const Topnav =()=> {
       <input type='text' placeholder='Search artist' className='search_input'/>
     </div>
     </div>
- 
-     
    
     </Box>
   )
