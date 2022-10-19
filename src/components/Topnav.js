@@ -4,10 +4,14 @@ import styled from 'styled-components'
 import Icons, { Logo, MenuIcon, Serachicon } from '../assets/Icons'
 import SideBar from './Sidebar'
 
-const Box = styled.div`
+const Wrapper = styled.div`
 position:fixed;
 top: 0;
+/* margin-bottom:80px; */
 z-index: 1000;
+background: #1D2123;
+width:100vw;
+
 
 
 padding: 25px 10px 0 10px;
@@ -17,6 +21,8 @@ padding: 25px 10px 0 10px;
    
     
   }
+
+
 
 
 
@@ -101,9 +107,14 @@ outline:none;
 `
 
 
-const Topnav =()=> { 
+const Topnav =(props)=> { 
   return (
-    <Box>
+    <Wrapper>
+     {/* <div className='menu_icon' onClick={props.onClick}>
+
+      <MenuIcon/>
+
+    </div> */}
     
     <div className='logo'>
     <Link to='/'><Logo/></Link>
@@ -116,7 +127,7 @@ const Topnav =()=> {
     </div>
     </div>
    
-    </Box>
+    </Wrapper>
   )
 }
 

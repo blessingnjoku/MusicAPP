@@ -3,13 +3,16 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { Homeicon, LogoutIcon, MenuIcon, MusiclibaryIcon, ProfileIcon, Radio, VideoIcon } from '../../assets/Icons'
 import {AiOutlineClose,AiIcons}from 'react-icons/ai'
+import { FaGrHomeRounded} from "react-icons/fa";
 
 
 const Wrapper = styled.div`
 
 
 position:fixed;
+
 top: 100px;
+left:0;
 .menu_icon {
   display:none;
   @media screen and (max-width:468px){
@@ -178,15 +181,16 @@ function SideBar() {
     <Wrapper >
 
     <div className='menu_icon' onClick={ShowMenu}>
-      <MenuIcon/>
+    <MenuIcon/>
+    
 
     </div>
    
-   <div className= {openNav ? 'container active': 'container'} onClick={ShowMenu} >
+   <div className= {openNav ? 'container active': 'container'} >
    <span className='close'><AiOutlineClose /></span>
   <div className='icon_box1'>
   <Link to='/' className='menu_icon_items'><Homeicon/><span className='menu_text'>Home</span></Link>
-   <Link to='/' className='menu_icon_items'> <MusiclibaryIcon/><span className='menu_text'>My collection</span></Link>
+   <Link to='/collection' className='menu_icon_items'> <MusiclibaryIcon/><span className='menu_text'>My collection</span></Link>
    <Link to='/' className='menu_icon_items'> <Radio/><span className='menu_text'>Radio</span></Link>
    <Link to='/' className='menu_icon_items'>  <VideoIcon/><span className='menu_text'>Music Video</span></Link>
   </div>
@@ -196,7 +200,7 @@ function SideBar() {
    <Link to='/' className='menu_icon_items'> <LogoutIcon/><span className='menu_text'>Logout</span></Link>
    </div>
    
-  
+
     </div>
 
 

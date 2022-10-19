@@ -2,33 +2,43 @@ import React from 'react'
 import Playlist from './Playlist';
 import TopChart from './TopChart.js';
 import styled from 'styled-components';
-import Topnav from '../Topnav';
-import Rows from '../MusicCard';
+
+
+import NewMusicCard from '../MusicCard';
+import LargeRow from '../LargeRow';
 
 // styled component
 
 const Wrapper =styled.div`
   background: #1D2123;
-  padding-left:20px;
-width:100vmax;
-height: 100vh;
-position:absolute;
-top:0;
-z-index:-1000;
+  width:100%;
+  height: 100%;
+  padding:20px;
+
+
 .container{
     display:flex;
     justify-content:space-evenly;
     align-content:space-between;
     flex-wrap:wrap;
-    margin-top:100px;
-    
+    margin-top:90px;
+    padding-bottom:20px;
+  
 
+    @media screen and (max-width:468px){
+        display:flex;
+        flex-direction:column;
+
+    }  
 
 }
+.cards{
+    overflow-y:scroll;
+    overflow-x:hidden;
+    height:300px;
 
+}
 `
-
-
 
 
 const Hero = ()=> {
@@ -38,8 +48,16 @@ const Hero = ()=> {
     <Playlist/>
     <TopChart/>
     </div>
-    <Rows/>
-    Hero
+    <div className='cards'>
+    <NewMusicCard title="New Release"/>
+    <NewMusicCard caption="Trending"/>
+  
+
+    </div>
+
+
+    
+    <LargeRow/>
     </Wrapper>
   )
 }

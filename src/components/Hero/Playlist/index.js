@@ -9,9 +9,14 @@ import { fadeIn } from 'react-animations'
 
 
 const Wrapper = styled.div`
+    @media screen and (max-width: 468px){
+        width:100%;
+        
+       }
 
 .playList_card{
-width: 686px;
+    width: 100%;
+max-width: 686px;
 height: 373px;
 left: 0px;
 top: 0px;
@@ -22,6 +27,11 @@ display:flex;
 justify-content: space-between;
     align-content:space-between;
     /* position:relative; */
+    @media screen and (max-width: 468px){
+        width: max-content;
+        
+        
+    }
 
 .hero_text_box{
    
@@ -97,6 +107,10 @@ color: #FFFFFF;
 }
 .heroimg{
     z-index: 1000;
+    @media screen and (max-width: 468px){
+        display:none;
+        
+    }
 }
 img{
     width: 100%;

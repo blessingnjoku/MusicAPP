@@ -1,11 +1,15 @@
 import React from 'react'
 import {topimg1} from '../../../assets/images/index'
-
+import { TopChartData } from './TopChartData';
 // styled component
 import styled from 'styled-components';
 import { OpenHeart } from '../Svgs';
 
 const Wrapper = styled.div`
+
+
+
+
 .heading{
     font-family: 'Quicksand';
     font-style: normal;
@@ -13,12 +17,28 @@ const Wrapper = styled.div`
    font-size: 24px;
   line-height: 120%;
   color: #EFEEE0;
+  margin-top:20px;
   margin-bottom:20px;
 }
 
 .contain{
     display: flex;
     flex-direction:column;
+    height: 300px;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    @media screen and (max-width: 468px) {
+        width:390px;
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        row-gap:2;
+        overflow-y:hidden;
+        overflow-x:scroll;
+      
+        
+        
+       }
    
     
     
@@ -31,6 +51,23 @@ const Wrapper = styled.div`
        display: flex;
        justify-content: space-between;
        margin-bottom:20px;
+       @media screen and (max-width: 468px) {
+        display: flex;
+        flex-direction:column;
+        margin-right:10px;
+        padding:20px;
+        /* width: 80%;
+        max-width: 300px; */
+        height: 200px;
+        /* width:300px; */
+     
+        
+        
+       }
+ 
+       
+   
+    
 
     h6{
         width: 144px;
@@ -68,6 +105,8 @@ const Wrapper = styled.div`
        border-radius:50%;
        text-align:center;
        padding:10px;
+       margin-top:20px;
+      
      
      
        .openHeart{
@@ -86,45 +125,27 @@ const TopChart =()=> {
   return (
     <Wrapper> 
     {/* title */}
-    <h1 className='heading'>Top Chart</h1>
+    <h1 className='heading'>Top Charts</h1>
     {/* cards */}
     <div className='contain'>
-    <div className='Top_chart_card'>
-    <div className='img_box'>
-        <img src={topimg1} alt='music card'/>
+    {
+        TopChartData.map((data)=>(
+        <div className='Top_chart_card' key={data.id}>
+      <div className='img_box'>
+        <img src={data.image} alt='music card'/>
     </div>
     <div style={{flex:'1', marginLeft:'10px'}}>
-        <h6 className='music_genre'>Golden age of 80s</h6>
-        <p className='sub_title'>Sean swadder</p>
-        <p className='duration' style={{color:'#ffff', marginTop:'5px'}}>2:34:45</p>
+        <h6 className='music_genre'>{data.heading}</h6>
+        <p className='sub_title'>{data.desc}</p>
+        <p className='duration' style={{color:'#ffff', marginTop:'5px'}}>{data.time}</p>
     </div>
     <span className='open_heart_svg'><OpenHeart/></span>
 
     </div>
-    <div className='Top_chart_card'>
-    <div className='img_box'>
-        <img src={topimg1} alt='music card'/>
-    </div>
-    <div style={{flex:'1', marginLeft:'10px'}}>
-        <h6 className='music_genre'>Golden age of 80s</h6>
-        <p className='sub_title'>Sean swadder</p>
-        <p className='duration' style={{color:'#ffff', marginTop:'5px'}}>2:34:45</p>
-    </div>
-    <span className='open_heart_svg'><OpenHeart/></span>
 
-    </div>
-    <div className='Top_chart_card'>
-    <div className='img_box'>
-        <img src={topimg1} alt='music card'/>
-    </div>
-    <div style={{flex:'1', marginLeft:'10px'}}>
-        <h6 className='music_genre'>Golden age of 80s</h6>
-        <p className='sub_title'>Sean swadder</p>
-        <p className='duration' style={{color:'#ffff', marginTop:'5px'}}>2:34:45</p>
-    </div>
-    <span className='open_heart_svg'><OpenHeart openHeart='openHeart'/></span>
 
-    </div>
+    ))}
+   
 
     </div>
 

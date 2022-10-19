@@ -1,14 +1,16 @@
 import React from 'react'
-import SideBar from '../components/Sidebar/'
-import Topnav from '../components/Topnav'
 import styled from 'styled-components'
 import Hero from '../components/Hero'
+import Layout from './Layout'
 
-const Wrapper =styled.div`
-/* background: #1D2123; */
-.box{
-    display:flex;
-}
+const Wrapper = styled.div`
+width: 100vw;
+height: 100vh;
+background: #1D2123;
+overflow-x:hidden;
+display:flex;
+justify-content:center;
+align-content:center;
 
 
 `
@@ -18,14 +20,12 @@ const Wrapper =styled.div`
 function Home() {
   return (
     <Wrapper>
-     <Topnav/>
-     <div className='box'>
-     <SideBar/>
        <Hero/>
-     </div>
-     
+
+
     </Wrapper>
   )
+    
 }
 
 export default Home
