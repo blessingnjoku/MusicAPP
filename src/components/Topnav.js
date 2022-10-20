@@ -7,24 +7,18 @@ import SideBar from './Sidebar'
 const Wrapper = styled.div`
 position:fixed;
 top: 0;
-/* margin-bottom:80px; */
+margin-bottom:80px;
 z-index: 1000;
-background: #1D2123;
 width:100vw;
-
-
-
 padding: 25px 10px 0 10px;
+background: #1D2123;
+
 @media screen and (max-width:468px){
     display: flex;
     flex-direction:row;
    
     
   }
-
-
-
-
 
 .logo{
 height: 60px;

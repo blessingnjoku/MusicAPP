@@ -4,11 +4,14 @@ import { TopChartData } from './TopChartData';
 // styled component
 import styled from 'styled-components';
 import { OpenHeart } from '../Svgs';
+import { Link } from 'react-router-dom';
 
 const Wrapper = styled.div`
-
-
-
+  background-color: #1D2123;
+  a{
+    text-decoration:none;
+    
+  }
 
 .heading{
     font-family: 'Quicksand';
@@ -27,6 +30,7 @@ const Wrapper = styled.div`
     height: 300px;
     overflow-y:scroll;
     overflow-x:hidden;
+
     @media screen and (max-width: 468px) {
         width:390px;
         display:flex;
@@ -56,10 +60,9 @@ const Wrapper = styled.div`
         flex-direction:column;
         margin-right:10px;
         padding:20px;
-        /* width: 80%;
-        max-width: 300px; */
+      
         height: 200px;
-        /* width:300px; */
+      
      
         
         
@@ -90,6 +93,7 @@ const Wrapper = styled.div`
         width: 63px;
         height: 63px;
        border-radius: 10px;
+      
        img{
         width: 100%;
         height: 100%;
@@ -131,14 +135,22 @@ const TopChart =()=> {
     {
         TopChartData.map((data)=>(
         <div className='Top_chart_card' key={data.id}>
-      <div className='img_box'>
+        <Link>
+        <div className='img_box'>
         <img src={data.image} alt='music card'/>
     </div>
+        </Link>
+     
+    
     <div style={{flex:'1', marginLeft:'10px'}}>
-        <h6 className='music_genre'>{data.heading}</h6>
+
+       <Link>
+       <h6 className='music_genre'>{data.heading}</h6>
         <p className='sub_title'>{data.desc}</p>
         <p className='duration' style={{color:'#ffff', marginTop:'5px'}}>{data.time}</p>
+       </Link>
     </div>
+  
     <span className='open_heart_svg'><OpenHeart/></span>
 
     </div>

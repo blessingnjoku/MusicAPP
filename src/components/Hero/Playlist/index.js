@@ -9,10 +9,10 @@ import { fadeIn } from 'react-animations'
 
 
 const Wrapper = styled.div`
-    @media screen and (max-width: 468px){
+    /* @media screen and (max-width: 468px){
         width:100%;
         
-       }
+       } */
 
 .playList_card{
     width: 100%;
@@ -92,7 +92,7 @@ color: #FFFFFF;
 }
 
 .image_box{
-   /* background-color:#FACD66; */
+  
    background-color:transparent;
    z-index: 100;
     position:relative;

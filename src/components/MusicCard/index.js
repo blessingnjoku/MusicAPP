@@ -40,7 +40,7 @@ color: #EFEEE0;
 min-width: 153px;
 height: 153px;
 border-radius: 25px;
-background-color:brown;
+background-color:gray;
 margin-right:20px;
 transition:transform 2s;
 :hover{
@@ -71,7 +71,7 @@ color:#fff;
 const NewMusicCard =(props)=> {
   return (
     <Wrapper >
-   <h1 className='title'>{props.title} {props.caption}</h1>
+   <h1 className='title'>{props.title} {props.caption}{props.Radio}{props.videos}</h1>
     <div className='contain'>
  {
     MusicData.map((items)=>(

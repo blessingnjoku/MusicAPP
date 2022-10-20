@@ -17,21 +17,21 @@ export const TopChartData =[
     },
     {
         id:3,
-        image:'https://unsplash.com/photos/gqX0rPCmdiU/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjY1NTEwNzE3&force=true',
+        image:require('../../../assets/images/pic5.png'),
         heading:'Gospel',
         desc:'steeve crowd',
         time:'1:34:45'
     },
     {
         id:4,
-        image:'https://unsplash.com/photos/rLySNDRKYcw/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8NzB8fG11c2ljJTIwYXJ0aXN0fGVufDB8fHx8MTY2NTQ5NjU3NA&force=true',
+        image:require('../../../assets/images/pic7.png'),
         heading:'jam of the 90s',
         desc:'Jeoboy',
         time:'1:34:45'
     },
     {
         id:5,
-        image:'https://unsplash.com/photos/2gu4hKuFhi0/download?force=true',
+        image:require('../../../assets/images/pic4.png'),
         heading:'afro',
         desc:'Wizkid',
         time:'1:34:45'

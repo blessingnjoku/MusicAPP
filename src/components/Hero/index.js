@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 import NewMusicCard from '../MusicCard';
 import LargeRow from '../LargeRow';
+import { primaryColor} from '../Colors'
 
 // styled component
 
@@ -14,6 +15,7 @@ const Wrapper =styled.div`
   width:100%;
   height: 100%;
   padding:20px;
+  overflow-y:auto;
 
 
 .container{
@@ -23,6 +25,7 @@ const Wrapper =styled.div`
     flex-wrap:wrap;
     margin-top:90px;
     padding-bottom:20px;
+    overflow-y:scroll;
   
 
     @media screen and (max-width:468px){
@@ -50,7 +53,9 @@ const Hero = ()=> {
     </div>
     <div className='cards'>
     <NewMusicCard title="New Release"/>
-    <NewMusicCard caption="Trending"/>
+    <NewMusicCard caption="Recently played"/>
+    <NewMusicCard radio="Radio"/>
+    <NewMusicCard videos="Music Videos"/>
   
 
     </div>
