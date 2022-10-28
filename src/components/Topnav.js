@@ -11,7 +11,7 @@ margin-bottom:80px;
 z-index: 1000;
 width:100vw;
 padding: 25px 10px 0 10px;
-background: #1D2123;
+/* background: #1D2123; */
 
 @media screen and (max-width:468px){
     display: flex;
@@ -38,19 +38,21 @@ width: auto;
 height: 60px;
 left: 96px;
 top: 0px;
-background: #1D2123;
+background: transparent;
 padding-top: 20px;
 padding-left:15px;
 outline:none;
 
 
 .search_box{
-  width: 200px;
+  width: 300px;
   /* height: 50px; */
   display: flex;
   flex-direction:row;
-  background: #1D2123;
-  padding:10px;
+ 
+background: transparent;
+
+  padding:15px;
   @media screen and (max-width:468px){
   float:right;
   
@@ -60,7 +62,9 @@ outline:none;
   .search_input{
 
     width: 100%;
-  background: #1D2123;;
+  
+background: transparent;
+
   padding-left:8px;
   border:none;
   

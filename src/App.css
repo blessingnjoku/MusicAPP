@@ -20,6 +20,8 @@
 
 .nav_link> path:hover{
   fill:#FACD66;
+  fill-rule: unset;
+  fill-opacity:1;
 }
 .nav_link >path.active{
   fill: #FACD66;

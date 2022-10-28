@@ -12,9 +12,10 @@ import { primaryColor } from "../Colors";
 const Wrapper = styled.div`
   background: #1d2123;
   width: 100%;
-  height: 100%;
+  height:100%;
   padding: 20px;
   overflow-y: auto;
+
 
   .container {
     display: flex;
@@ -25,6 +26,7 @@ const Wrapper = styled.div`
     padding-left: 20px;
     padding-bottom: 20px;
     width: 100%;
+  
 
     @media screen and (max-width: 468px) {
       display: flex;
@@ -50,9 +52,9 @@ const Hero = () => {
       </div>
       <div className="cards">
         <NewMusicCard title="New Release" />
-        <NewMusicCard caption="Recently played" />
-        <NewMusicCard radio="Radio" />
-        <NewMusicCard videos="Music Videos" />
+        <NewMusicCard title="Recently played" />
+        <NewMusicCard title="Radio" />
+        <NewMusicCard title="Music Videos" />
       </div>
 
       <LargeRow />

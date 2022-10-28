@@ -111,16 +111,16 @@ const TopChart = () => {
       <h1 className="heading">Top Charts</h1>
       {/* cards */}
       <div className="contain">
-        {TopChartData.map((data) => (
-          <div className="Top_chart_card" key={data.id}>
-            <Link>
+        {TopChartData.map((data, key) => (
+          <div className="Top_chart_card" key={key}>
+            <Link to={`/${data.id}`}>
               <div className="img_box">
                 <img src={data.image} alt="music card" />
               </div>
             </Link>
 
             <div style={{ flex: "1", marginLeft: "10px" }}>
-              <Link>
+              <Link to={`/${data.id}`}>
                 <h6 className="music_genre">{data.heading}</h6>
                 <p className="sub_title">{data.desc}</p>
                 <p

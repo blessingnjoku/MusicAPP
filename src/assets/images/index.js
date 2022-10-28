@@ -5,5 +5,7 @@ export {default as circle4} from '../images/circle4.png'
 export {default as circle5} from '../images/circle5.png'
 export {default as Vector1} from '../images/Vector1.png'
 export {default as topimg1} from '../images/topimg1.png'
+export {default as  Leadimage} from '../images/Lead-image.png'
+
 
 

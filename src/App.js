@@ -13,8 +13,12 @@ function App() {
     <Layout/>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/chart' element={<MusicCharts/>}/>
+        <Route path='/albumcart' element={<MusicCharts/>}/>
+        {/* <Route path='/:id' element={<MusicCharts/>}/> */}
         <Route path='/collection' element={<MusicCollection/>}/>
+      
+
+        
 
 
       </Routes>
